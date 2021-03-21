@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Golden Gate Region PCA`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Chris Hamilton`,
+      summary: `who is attempting to build a website.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `It's not just the cars, it's the people.`,
+    siteUrl: `https://www.pca-ggr.org/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `behindthedriver`,
     },
   },
   plugins: [
