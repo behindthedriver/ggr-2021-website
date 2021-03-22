@@ -1,0 +1,27 @@
+.cardclosed {
+    width: 150px;
+    height: 150px;
+    border-width: 1rem;
+    border-color: #005b99;
+    border-top: 1px;
+    border-bottom: 1px;
+    background-color: white;
+    float: left;
+    overflow: hidden;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardopen {
+    width: 150px;
+    height: 300px;
+    border-width: 1rem;
+    border-color: #005b99;
+    border-top: 1px;
+    border-bottom: 1px;
+    background-color: white;
+    float: left;
+    overflow: hidden;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }

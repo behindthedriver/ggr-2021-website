@@ -11,7 +11,7 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-      <div class="clearfix">
+      <div className="clearfix">
       <p>Welcome to the home page. This page will contain cards according to PDF design.</p>
       <Card>Join The Fun!</Card>
       <Card>Fun Runs</Card>

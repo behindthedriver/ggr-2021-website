@@ -6,7 +6,45 @@
  */
 
 import * as React from "react"
+import * as cardStyles from "./card.module.css"
 
+class Card extends React.Component {
+  constructor(props) {
+    super(props);
+    //this.children = props.children;
+    //to make callback resolve 'this'
+    this.handleClick = this.handleClick.bind(this);
+    
+    this.state = { open: false };
+  }
+
+
+  handleClick() {
+    this.setState( {open: !this.state.open } );
+
+    console.log(this.state.open);
+  }
+
+  render(){
+    if ( this.state.open ){
+      return(
+      <div className={cardStyles.cardopen} onClick={this.handleClick}>
+        <p>Card is open</p>
+        <h2>{this.props.children}</h2>
+      </div>        
+    );
+    }
+    else {
+      return(
+        <div className={cardStyles.cardclosed} onClick={this.handleClick}>
+          <h2>{this.props.children}</h2>
+        </div>        
+        );
+    }
+  }
+}
+
+/*
 const Card = ({children}) => {
   return (
     <div className="card">
@@ -14,5 +52,5 @@ const Card = ({children}) => {
     </div>
   )
 }
-
+*/
 export default Card
