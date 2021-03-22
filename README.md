@@ -1,4 +1,4 @@
-#GGR new website Project
+# GGR new website Project
 Welcome to the PCA GGR website project.
 
 See GATSBY-README.md for how to run the project.
@@ -13,6 +13,7 @@ Important Project Areas:
 - amplify/ - server side resources for aws
 
 Overall To Do list:
+- see PDF with index page cards design
 - Build front page and card component
 - Build site pages
 - Site photo galleries

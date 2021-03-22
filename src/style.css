@@ -9,9 +9,9 @@
   --maxWidth-xl: 36rem;
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 56rem;
+  --maxWidth-4xl: 54rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -81,6 +81,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: lightgray;
 }
 
 footer {
@@ -293,6 +294,24 @@ a:focus {
 
 .bio p {
   margin-bottom: var(--spacing-0);
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  border-width: 1rem;
+  border-color: #005b99;
+  border-top: 1px;
+  border-bottom: 1px;
+  background-color: white;
+  float: left;
+  overflow: hidden;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.clearfix {
+  overflow: auto;
 }
 
 .bio-avatar {

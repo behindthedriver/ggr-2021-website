@@ -2,6 +2,7 @@ import * as React from "react"
 import {  graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Card from "../components/card"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data, location }) => {
@@ -10,8 +11,17 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-      <p>Welcome to the home page. This page will contain cards.</p>
-      <p>This is a test</p>
+      <div class="clearfix">
+      <p>Welcome to the home page. This page will contain cards according to PDF design.</p>
+      <Card>Join The Fun!</Card>
+      <Card>Fun Runs</Card>
+      <Card>Autocross</Card>
+      <Card>Track</Card>
+      <Card>Social</Card>
+      <Card>Concours</Card>
+      <Card>Sponsors</Card>
+      <Card>Club Archives</Card>
+      </div>
     </Layout>
   )
 }
