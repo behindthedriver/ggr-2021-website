@@ -296,19 +296,7 @@ a:focus {
   margin-bottom: var(--spacing-0);
 }
 
-.card {
-  width: 150px;
-  height: 150px;
-  border-width: 1rem;
-  border-color: #005b99;
-  border-top: 1px;
-  border-bottom: 1px;
-  background-color: white;
-  float: left;
-  overflow: hidden;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
+
 
 .clearfix {
   overflow: auto;

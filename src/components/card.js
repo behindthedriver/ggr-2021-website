@@ -28,15 +28,27 @@ class Card extends React.Component {
   render(){
     if ( this.state.open ){
       return(
-      <div className={cardStyles.cardopen} onClick={this.handleClick}>
-        <p>Card is open</p>
+      <div 
+        className={cardStyles.cardopen} 
+        onClick={this.handleClick}
+        onKeyDown={this.handleClick} 
+        role="button"
+        tabIndex={0}
+      >
         <h2>{this.props.children}</h2>
+        <p>Card is open</p>
       </div>        
     );
     }
     else {
       return(
-        <div className={cardStyles.cardclosed} onClick={this.handleClick}>
+        <div 
+          className={cardStyles.cardclosed} 
+          onClick={this.handleClick} 
+          onKeyDown={this.handleClick} 
+          role="button"
+          tabIndex={0}
+          >
           <h2>{this.props.children}</h2>
         </div>        
         );
