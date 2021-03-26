@@ -1,6 +1,6 @@
 .cardclosed {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-width: 1rem;
     border-color: #005b99;
     border-top: 1px;
@@ -10,15 +10,16 @@
     overflow: hidden;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    padding-left: 1rem;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
     
   }
 
   .cardopen {
-    width: 150px;
+    width: 200px;
     height: 300px;
     border-width: 1rem;
     border-color: #005b99;
@@ -29,4 +30,10 @@
     overflow: hidden;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
   }
