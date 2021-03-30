@@ -8,8 +8,8 @@
     background-color: white;
     float: left;
     overflow: hidden;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
     padding-left: 1rem;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
@@ -18,7 +18,7 @@
     
   }
 
-  .cardopen {
+.cardopen {
     width: 200px;
     height: 300px;
     border-width: 1rem;
@@ -28,10 +28,9 @@
     background-color: white;
     float: left;
     overflow: hidden;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
     padding-left: 1rem;
-
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     border-bottom-left-radius: .25rem;
