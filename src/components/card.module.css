@@ -1,11 +1,11 @@
 .cardclosed {
-    width: 200px;
+    width: 250px;
     height: 200px;
     border-width: 1rem;
     border-color: #005b99;
     border-top: 1px;
     border-bottom: 1px;
-    background-color: white;
+    background-color: lightgray;
     float: left;
     overflow: hidden;
     margin-right: .25rem;
@@ -19,20 +19,32 @@
   }
 
 .cardopen {
-    width: 200px;
+    width: 250px;
     height: 300px;
     border-width: 1rem;
     border-color: #005b99;
     border-top: 1px;
     border-bottom: 1px;
-    background-color: white;
+    background-color: lightgray;
     float: left;
     overflow: hidden;
     margin-right: .25rem;
-    margin-bottom: .25rem;
     padding-left: 1rem;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     border-bottom-left-radius: .25rem;
     border-bottom-right-radius: .25rem;
+    
+  }
+
+  .linklist {
+    margin-bottom: 0;
+  }
+
+  ul,li {
+    margin-bottom: 0.1rem;
+  }
+
+  h1 {
+    margin-bottom: .25rem;
   }

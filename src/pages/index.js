@@ -12,15 +12,67 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
       <div className="clearfix">
-      <p>Welcome to the home page. This page will contain cards according to PDF design.</p>
-      <Card>Join The Fun!</Card>
-      <Card>Fun Runs</Card>
-      <Card>Autocross</Card>
-      <Card>Track</Card>
-      <Card>Social</Card>
-      <Card>Concours</Card>
-      <Card>Sponsors</Card>
-      <Card>Club Archives</Card>
+        <p>Welcome to the home page. This page will contain cards according to PDF design. Style, links, categories all tentative.</p>
+        <p>Rough Mock up of cards below:</p>
+        <Card 
+          title="Join The Fun" 
+          subtitle="Membership and Communications"
+        >
+            <ul>
+              <li>How to Join GGR</li>
+              <li>Receiving the Nugget</li>
+              <li>Email Announcements</li>
+              <li>Subscribing to the GGR Calendar</li>
+              </ul>
+        </Card>
+        <Card 
+          title="Fun Runs" 
+          subtitle="Great Roads & People"
+        >
+            <ul>
+              <li>About / Getting Started</li>
+              <li>Upcoming Events</li>
+              <li>Registration</li>
+              <li>Gallery</li>
+              <li>Blog</li>
+              </ul>
+        </Card>
+        <Card 
+          title="Autocross" 
+          subtitle="Your Car & Our Cones"
+        >
+            <ul>
+              <li>About / Getting Started</li>
+              <li>Upcoming Events</li>
+              <li>Registration</li>
+              <li>Venues</li>
+              <li>Classify your car</li>
+              <li>Results</li>
+              <li>Rules & Forms</li>
+              <li>Car Numbers</li>
+              <li>Annual School</li>
+              <li>Gallery</li>
+              <li>Blog</li>
+            </ul>
+        </Card>
+        <Card 
+          title="Track" 
+          subtitle="Vroom. And then some."
+        >
+            Join The Fun!
+        </Card>
+        <Card 
+          title="Join The Fun" 
+          subtitle="Membership and Communications"
+        >
+            Join The Fun!
+        </Card>
+        <Card>Autocross</Card>
+        <Card>Track</Card>
+        <Card>Social</Card>
+        <Card>Concours</Card>
+        <Card>Sponsors</Card>
+        <Card>Club Archives</Card>
       </div>
     </Layout>
   )

@@ -15,7 +15,7 @@ class Card extends React.Component {
     //to make callback resolve 'this'
     this.handleClick = this.handleClick.bind(this);
     
-    this.state = { open: false };
+    this.state = { open: true };
   }
 
 
@@ -35,8 +35,9 @@ class Card extends React.Component {
         role="button"
         tabIndex={0}
       >
-        <h2>{this.props.children}</h2>
-        <p>Card is open</p>
+        <h2>{this.props.title}</h2>
+        <h4>{this.props.subtitle}</h4>
+        {this.props.children}
       </div>        
     );
     }
@@ -49,20 +50,13 @@ class Card extends React.Component {
           role="button"
           tabIndex={0}
           >
-          <h2>{this.props.children}</h2>
+          <h2>{this.props.title}</h2>
+        <h4>{this.props.subtitle}</h4>
+          
         </div>        
         );
     }
   }
 }
 
-/*
-const Card = ({children}) => {
-  return (
-    <div className="card">
-      <h2>{children}</h2>
-    </div>
-  )
-}
-*/
 export default Card
