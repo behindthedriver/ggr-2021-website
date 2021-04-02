@@ -1,10 +1,10 @@
+/*
+*/
 .cardclosed {
     width: 250px;
-    height: 200px;
+    height: 250px;
     border-width: 1rem;
     border-color: #005b99;
-    border-top: 1px;
-    border-bottom: 1px;
     background-color: rgb(52, 73, 101);
     color: white;
     float: left;
@@ -13,33 +13,36 @@
     margin-bottom: .25rem;
     margin-top: .25rem;
     padding-left: 1rem;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-    border-bottom-right-radius: .25rem;
+    --edge-radius: .3rem;
+    border-radius: var(--edge-radius) var(--edge-radius) var(--edge-radius) var(--edge-radius);
 
     margin-block-end: .25rem;
     margin-block-start: .25rem;
+
+    transition: 100ms;
   }
 
-.cardopen {
-    width: 250px;
-    height: 300px;
+.cardopen{
+  width: 250px;
+    height: 250px;
     border-width: 1rem;
     border-color: #005b99;
-    border-top: 1px;
-    border-bottom: 1px;
-    background-color: lightgray;
+    background-color: rgb(52, 73, 101);
+    color: white;
     float: left;
     overflow: hidden;
     margin-right: .25rem;
+    margin-bottom: .25rem;
+    margin-top: .25rem;
     padding-left: 1rem;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-    
-  }
+    --edge-radius: .3rem;
+    border-radius: var(--edge-radius) var(--edge-radius) var(--edge-radius) var(--edge-radius);
+
+    margin-block-end: .25rem;
+    margin-block-start: .25rem;
+
+    transition: 100ms;
+}
 .cardbutton {
   color: #ff4f00;
   border-width: .1rem;
@@ -47,6 +50,7 @@
   border-style: solid;
   font-family: sans-serif;
   padding: .3rem .3rem .3rem .3rem;
+  background-color: transparent;
 }
   .linklist {
     margin-bottom: 0;

@@ -35,8 +35,7 @@ class Card extends React.Component {
         role="button"
         tabIndex={0}
       >
-        <h2>{this.props.title}</h2>
-        <h4>{this.props.subtitle}</h4>
+        <h4>{this.props.title}</h4>
         {this.props.children}
       </div>        
     );
@@ -52,11 +51,10 @@ class Card extends React.Component {
           >
           <h2>{this.props.title}</h2>
         <h4>{this.props.subtitle}</h4>
-        <buton
+        <button
           className={cardStyles.cardbutton}
-          role="button"
           tabIndex={0}
-        >Learn More</buton>
+        >Learn More</button>
           
         </div>        
         );
