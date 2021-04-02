@@ -5,8 +5,10 @@ import Layout from "../components/layout"
 import Card from "../components/card"
 import SEO from "../components/seo"
 
+
+
 const IndexPage = ({ data, location }) => {
-const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -14,7 +16,8 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
       <div className="clearfix">
         <p>Welcome to the home page. This page will contain cards according to PDF design. Style, links, categories all tentative.</p>
         <p>Rough Mock up of cards below:</p>
-        <Card 
+        
+        <Card
           title="Join The Fun" 
           subtitle="Membership and Communications"
         >
@@ -59,20 +62,24 @@ const siteTitle = data.site.siteMetadata?.title || `Title`
           title="Track" 
           subtitle="Vroom. And then some."
         >
-            Join The Fun!
+            
         </Card>
         <Card 
-          title="Join The Fun" 
-          subtitle="Membership and Communications"
+          title="Social" 
+          subtitle="It's not just the cars; it's the people!"
         >
-            Join The Fun!
+            
         </Card>
-        <Card>Autocross</Card>
-        <Card>Track</Card>
-        <Card>Social</Card>
-        <Card>Concours</Card>
-        <Card>Sponsors</Card>
-        <Card>Club Archives</Card>
+        <Card
+          title="Concours"
+          subtitle="The Clean Machine"></Card>
+        <Card
+          title="Sponsors"
+          subtitle="Thanks for pitching in!"></Card>
+        <Card
+          title="Club Archives"
+          subtitle="Been There. Done That."></Card>
+        
       </div>
     </Layout>
   )

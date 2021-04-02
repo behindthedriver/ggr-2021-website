@@ -15,7 +15,7 @@ class Card extends React.Component {
     //to make callback resolve 'this'
     this.handleClick = this.handleClick.bind(this);
     
-    this.state = { open: true };
+    this.state = { open: false };
   }
 
 
@@ -52,6 +52,11 @@ class Card extends React.Component {
           >
           <h2>{this.props.title}</h2>
         <h4>{this.props.subtitle}</h4>
+        <buton
+          className={cardStyles.cardbutton}
+          role="button"
+          tabIndex={0}
+        >Learn More</buton>
           
         </div>        
         );
