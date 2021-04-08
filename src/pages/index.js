@@ -3,7 +3,7 @@ import {  graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Card from "../components/card"
-import SEO from "../components/seo"
+import RenderHelmet from "../components/helmet"
 
 
 
@@ -12,7 +12,7 @@ const IndexPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home Page" />
+      <RenderHelmet title="Home Page" />
       <div className="clearfix">
         <p>Welcome to the home page. This page will contain cards according to PDF design. Style, links, categories all tentative.</p>
         <p>Rough Mock up of cards below:</p>
