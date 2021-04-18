@@ -26,7 +26,7 @@ import Typography from "@material-ui/core/Typography"
 
 
 const colorvsdarkgrey = "#1e1e1e";
-const colorlightgrey = "#494f5c";
+const colorlightgrey = "#252526";
 const colorclubblau = "#0075e1";
 const colorgoldengate= "#ff4f00";
 const colorlightfont= "white";
@@ -37,8 +37,9 @@ const useStyles = makeStyles( (theme) => (
       height: 150,
     },
     Card: {
-      width: 200,
-      background: 'linear-gradient(0deg, #1e1e1e, #494f5c)',
+      width: 250,
+      height: 325,
+      background: 'linear-gradient(0deg, #1e1e1e, #252526)',
       color: colorlightfont,
       boxShadow: "0 0 0 0",
       borderRadius: "0 0 0 0",
@@ -49,9 +50,14 @@ const useStyles = makeStyles( (theme) => (
     Button: {
       backgroundColor: colorclubblau,
       color: colorlightfont,
+      position: "sticky",
+      bottom: "0px",
     },
     Box: {
       backgroundColor: colorlightgrey,
+    },
+    CardContent: {
+      height: "120px",
     }
 
   }
@@ -74,7 +80,7 @@ class PcaCard extends React.Component {
                   image={this.props.image}
                   alt={this.props.imageAlt}
                   />
-                <CardContent>
+                <CardContent className={classes.CardContent}>
                     <Typography
                       component="h5"
                       variant="h5"
@@ -112,7 +118,7 @@ const IndexPage = ({ data, location }) => {
       <main>
         <br></br>
         <Container 
-          maxWidth="md"
+          maxWidth="lg"
           className={classes.container}>
           <br />
           <Grid container spacing={2} justify="center">
@@ -122,7 +128,7 @@ const IndexPage = ({ data, location }) => {
                 image="../images/1.Join the Fun.jpg"
                 imageAlt="Members Toasting at an event."
                 heading="Join the Fun"
-                subHeader="Membership and Communications">
+                subHeader="Membership and communications">
               </PcaCard>
             </Grid>
             <Grid item>
@@ -131,7 +137,7 @@ const IndexPage = ({ data, location }) => {
                 image="../images/2.Fun Runs.png"
                 imageAlt="Cars Driving through redwood forest."
                 heading="Fun Runs"
-                subHeader="Great Roads & People">
+                subHeader="Great roads & people">
               </PcaCard>
             </Grid>
             <Grid item>
@@ -158,7 +164,7 @@ const IndexPage = ({ data, location }) => {
                 image="../images/5.Social.jpg"
                 imageAlt="Cars Driving through redwood forest."
                 heading="Social"
-                subHeader="It's not just the cars; it's the people!">
+                subHeader="It's not just the cars, it's the people!">
               </PcaCard>
             </Grid>
             <Grid item>
@@ -187,7 +193,7 @@ const IndexPage = ({ data, location }) => {
                 image="../images/8.Club Archives.jpg"
                 imageAlt="Cars Driving through redwood forest."
                 heading="Club Archives"
-                subHeader="Been There. Done that.">
+                subHeader="Been there. Done that.">
 
               </PcaCard>
             </Grid>

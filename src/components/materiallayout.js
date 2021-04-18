@@ -7,7 +7,7 @@ import MenuIcon from "@material-ui/icons/Menu"
 
 
 const colorvsdarkgrey = "#1e1e1e";
-const colorlightgrey = "#494f5c";
+const colorlightgrey = "#252526";
 const colorclubblau = "#0075e1";
 const colorgoldengate= "#ff4f00";
 const colorlightfont= "white";
