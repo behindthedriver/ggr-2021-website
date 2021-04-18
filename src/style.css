@@ -54,12 +54,15 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #0075e1;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-club-blau: #0075e1;
+  --color-golden-gate: #ff4f00;
+  --color-primary: var(--color-club-blau);
+  --color-text: #ea00ff;
+  --color-text-light: #f200ff;
+  --color-heading: var(--color-club-blau);
   --color-heading-black: black;
-  --color-accent: #ff4f00;
+  --color-accent: var(--color-golden-gate);
+  --color-background: #1e1e1e;
 }
 
 /* HTML elements */
@@ -81,7 +84,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
-  background-color: lightgray;
+  background-color: var(--color-background);
 }
 
 footer {
@@ -121,7 +124,7 @@ h6 {
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-heading);
 }
 
 h2 {
@@ -251,7 +254,7 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
-  background-color: white;
+  background-color: var(--color-background);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {

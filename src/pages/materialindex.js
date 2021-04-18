@@ -1,18 +1,18 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-//import Layout from "../components/layout"
+import MaterialLayout from "../components/materiallayout"
 import RenderHelmet from "../components/helmet"
 
 import Button from "@material-ui/core/Button"
 import {
   AppBar,
+  Box,
   Card,
   CardActions,
   CardContent,
   CardHeader,
   CardMedia,
-  CssBaseline,
   Grid,
   IconButton,
   Toolbar,
@@ -24,28 +24,36 @@ import Container from "@material-ui/core/Container"
 
 import Typography from "@material-ui/core/Typography"
 
-import MenuIcon from "@material-ui/icons/Menu"
-import { StaticImage } from "gatsby-plugin-image"
+
+const colorvsdarkgrey = "#1e1e1e";
+const colorlightgrey = "#494f5c";
+const colorclubblau = "#0075e1";
+const colorgoldengate= "#ff4f00";
+const colorlightfont= "white";
 
 const useStyles = makeStyles( (theme) => (
   {
-    root: {
-      width: 200,
-    },
     media: {
       height: 150,
     },
-    container: {
-      backgroundcolor: 444,
-      marginBottom: theme.spacing(4),
+    Card: {
+      width: 200,
+      background: 'linear-gradient(0deg, #1e1e1e, #494f5c)',
+      color: colorlightfont,
+      boxShadow: "0 0 0 0",
+      borderRadius: "0 0 0 0",
     },
-    title: {
-      flexGrow: 1,
-      color: "textPrimary"
+    CardHeader: {
+      color: colorgoldengate,
     },
-    menuButton: {
-      marginRight: theme.spacing(2),
+    Button: {
+      backgroundColor: colorclubblau,
+      color: colorlightfont,
+    },
+    Box: {
+      backgroundColor: colorlightgrey,
     }
+
   }
 ));
 
@@ -59,9 +67,9 @@ class PcaCard extends React.Component {
   render() {
     const classes = this.props.classes;
     return (
-      <>
-      <Card className={classes.root}>
-                <CardMedia
+      <Box>
+      <Card className={classes.Card}>
+      <CardMedia
                   className={classes.media} 
                   image={this.props.image}
                   alt={this.props.imageAlt}
@@ -69,8 +77,10 @@ class PcaCard extends React.Component {
                 <CardContent>
                     <Typography
                       component="h5"
-                      variant="h5">
+                      variant="h5"
+                      className={classes.CardHeader}>
                       {this.props.heading}
+                      
                     </Typography>
                     <Typography
                       >
@@ -78,10 +88,10 @@ class PcaCard extends React.Component {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button>Learn More</Button>
+                  <Button className={classes.Button}>Learn More</Button>
                 </CardActions>
               </Card>
-      </>
+      </Box>
     )
   }
     
@@ -94,31 +104,11 @@ const IndexPage = ({ data, location }) => {
   const classes = useStyles();
 
   return (
-    <>
-      <CssBaseline />
-      <RenderHelmet title={siteTitle} />
-      <Container maxWidth="md" className={classes.container}>
+    <MaterialLayout location={location}>
+      <Box  className={classes.Box}>
       
-      <AppBar>
-        <Toolbar>
-        <IconButton 
-          edge="start" 
-          className={classes.menuButton}
-          aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-
-        <Typography 
-          component="h6" 
-          variant="h6" 
-          
-          className={classes.title}>
-          Porsche Club of America - Golden Gate Region
-        </Typography>
-        </Toolbar>
-        
-      </AppBar>
-      </Container>
+      <RenderHelmet title={siteTitle} />
+      
       <main>
         <br></br>
         <Container 
@@ -204,26 +194,13 @@ const IndexPage = ({ data, location }) => {
           </Grid>
         </Container>
       </main>
-    </>
+    </Box>
+    </MaterialLayout>
+   
   )
 }
 
-/*
-<CssBaseline>
-      <AppBar>
 
-      </AppBar>
-      <main>
-        <Container maxWidth="sm">
-          <Typography component="h1" align="center" gutterBottom>
-            Heading
-          </Typography>
-        </Container>
-      </main>
-    </CssBaseline>
-
-
-*/
 export default IndexPage
 
 export const pageQuery = graphql`
