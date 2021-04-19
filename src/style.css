@@ -57,8 +57,8 @@
   --color-club-blau: #0075e1;
   --color-golden-gate: #ff4f00;
   --color-primary: var(--color-club-blau);
-  --color-text: #ea00ff;
-  --color-text-light: #f200ff;
+  --color-text: #f1f1f1;
+  --color-text-light: #f1f1f1;
   --color-heading: var(--color-club-blau);
   --color-heading-black: black;
   --color-accent: var(--color-golden-gate);
@@ -215,6 +215,7 @@ blockquote {
   font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
+  background-color: var(--color-club-blau)
 }
 
 blockquote > :last-child {

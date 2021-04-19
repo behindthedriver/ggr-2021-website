@@ -2,16 +2,16 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
+  //build blog posts
   const { createPage } = actions
-
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
-
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
         allMarkdownRemark(
+          filter: {fileAbsolutePath: {glob: "**/blog/**"}}
           sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {
@@ -25,7 +25,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     `
   )
-
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
@@ -36,12 +35,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allMarkdownRemark.nodes
 
+
   // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+  // But only if there's at least one markdown file found at "/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
+      console.log(post);
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
@@ -56,6 +57,53 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+
+    // Define a template for site page
+    const sitePage = path.resolve(`./src/templates/page-template.js`)
+    // Get all markdown blog posts sorted by date
+    const pageresult = await graphql(
+      `
+        {
+          allMarkdownRemark(
+            filter: {fileAbsolutePath: {glob: "**/content/**"}}
+            sort: { fields: [frontmatter___date], order: ASC }
+            limit: 1000
+          ) {
+            nodes {
+              id
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      `
+    )
+    if (pageresult.errors) {
+      reporter.panicOnBuild(
+        `There was an error loading your main site pages`,
+        pageresult.errors
+      )
+      return
+    }
+  
+    const pages = pageresult.data.allMarkdownRemark.nodes
+
+    if (pages.length > 0) {
+      pages.forEach((page, index) => {
+          console.log(page);
+        createPage({
+          path: page.fields.slug,
+          component: sitePage,
+          context: {
+            id: page.id,
+          },
+        })
+      })
+    }
+
+
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

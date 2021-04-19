@@ -12,14 +12,25 @@ module.exports = {
     },
   },
   plugins: [
+    //image plugin
     `gatsby-plugin-image`,
+    //filesystem plugin
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/blog`,
         name: `blog`,
       },
     },
+    //filesystem plugin
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `pages`,
+      },
+    },
+    //filesystem plugin
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +38,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    //transformer plugin
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -112,13 +124,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `PCA GGR Website`,
+        short_name: `PCAGGR`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#1e1e1e`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ggr-logo.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -2,30 +2,25 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
-import { AppBar, Container, IconButton, makeStyles, Toolbar, Typography } from "@material-ui/core"
+import { AppBar, Container, Grid, IconButton, makeStyles, Toolbar, Typography } from "@material-ui/core"
 import MenuIcon from "@material-ui/icons/Menu"
 
 
-const colorvsdarkgrey = "#1e1e1e";
+//const colorvsdarkgrey = "#1e1e1e";
 const colorlightgrey = "#252526";
-const colorclubblau = "#0075e1";
+//const colorclubblau = "#0075e1";
 const colorgoldengate= "#ff4f00";
-const colorlightfont= "white";
+const colorlightfont= "#f0f0f0";
 
 
 
 const useStyles = makeStyles( (theme) => (
   {
-    root: {
-      width: 200,
-      backgroundColor: "pink",
-      color: "pink",
-    },
     Box: {
       backgroundColor: colorlightgrey,
     },
     media: {
-      height: 150,
+      height: 200,
     },
     container: {
       backgroundColor: colorlightgrey,
@@ -44,7 +39,9 @@ const useStyles = makeStyles( (theme) => (
         backgroundColor: "#1e1e1e",
       boxShadow: "0 0 0 0"
     },
-    
+    griditem: {
+      width: 325,
+    }
   }
 ));
 
@@ -105,12 +102,37 @@ const MaterialLayout = ({ location, title, children }) => {
       </header>
       <main>{children}</main>
       <footer>
-          <Container maxWidth="md">
-          {header}
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-          </Container>
+      <Container maxWidth="lg">
+        <Grid container justify="center">
+          <Grid item className={classes.griditem}>
+          <StaticImage
+        //className="bio-avatar"
+        formats={["AUTO", "WEBP", "AVIF"]}
+        src="../images/ggr-logo.svg"
+        width={150}
+        height={150}
+        quality={95}
+        alt="GGR Logo" />
+          <Typography>
+          © {new Date().getFullYear()}, 
+            PCA-GGR
+        
+          </Typography>
+          </Grid>
+          <Grid item className={classes.griditem}>
+            <Typography>
+            Built with 
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </Typography>
+          
+          </Grid>
+          <Grid item className={classes.griditem}>
+            <Typography>
+            Zone 7 Logo
+              </Typography>
+          </Grid>
+        </Grid>
+        </Container>
           
       </footer>
     </div>

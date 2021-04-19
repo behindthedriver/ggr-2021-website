@@ -1,21 +1,19 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import MaterialLayout from "../components/materiallayout"
 import RenderHelmet from "../components/helmet"
 
 import Button from "@material-ui/core/Button"
 import {
-  AppBar,
+  
   Box,
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   CardMedia,
   Grid,
-  IconButton,
-  Toolbar,
+  
 } from "@material-ui/core"
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -25,20 +23,20 @@ import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 
 
-const colorvsdarkgrey = "#1e1e1e";
+//const colorvsdarkgrey = "#1e1e1e";
 const colorlightgrey = "#252526";
 const colorclubblau = "#0075e1";
 const colorgoldengate= "#ff4f00";
-const colorlightfont= "white";
+const colorlightfont= "#F0F0F0";
 
 const useStyles = makeStyles( (theme) => (
   {
     media: {
-      height: 150,
+      height: 275,
     },
     Card: {
-      width: 250,
-      height: 325,
+      width: 345,
+      height: 500,
       background: 'linear-gradient(0deg, #1e1e1e, #252526)',
       color: colorlightfont,
       boxShadow: "0 0 0 0",
@@ -57,19 +55,20 @@ const useStyles = makeStyles( (theme) => (
       backgroundColor: colorlightgrey,
     },
     CardContent: {
-      height: "120px",
+      height: "100px",
+    },
+    Container: {
+      maxWidth: "1500px",
     }
-
   }
 ));
 
 class PcaCard extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
-    //this.children = props.children;
-    //to make callback resolve 'this'
-    
-  }
+    this.children = props.children;
+    //to make callback resolve 'this'  
+  } */
   render() {
     const classes = this.props.classes;
     return (
@@ -95,6 +94,9 @@ class PcaCard extends React.Component {
                 </CardContent>
                 <CardActions>
                   <Button className={classes.Button}>Learn More</Button>
+                  <Typography>
+                  {this.props.children}
+                  </Typography>
                 </CardActions>
               </Card>
       </Box>
@@ -118,8 +120,7 @@ const IndexPage = ({ data, location }) => {
       <main>
         <br></br>
         <Container 
-          maxWidth="lg"
-          className={classes.container}>
+          className={classes.Container}>
           <br />
           <Grid container spacing={2} justify="center">
             <Grid item>
@@ -147,6 +148,8 @@ const IndexPage = ({ data, location }) => {
                 imageAlt="Cars waiting on autocross tarmac in double chevron."
                 heading="Autocrosss"
                 subHeader="Your cars and our cones">
+                  <Link to="/autocross">Autocross</Link>
+                  
               </PcaCard>
             </Grid>
             <Grid item>
