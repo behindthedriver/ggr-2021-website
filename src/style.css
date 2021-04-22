@@ -34,8 +34,8 @@
     Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
-  --fontWeight-normal: 300;
-  --fontWeight-medium: 400;
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
   --fontWeight-semibold: 500;
   --fontWeight-bold: 600;
   --fontWeight-extrabold: 700;
@@ -62,7 +62,7 @@
   --color-heading: var(--color-club-blau);
   --color-heading-black: black;
   --color-accent: var(--color-golden-gate);
-  --color-background: #1e1e1e;
+  --color-background: #f0f0f0;
 }
 
 /* HTML elements */

@@ -1,5 +1,5 @@
 import * as React from "react"
-import {  graphql } from "gatsby"
+import {  graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Card from "../components/card"
@@ -16,7 +16,7 @@ const IndexPage = ({ data, location }) => {
       <div className="clearfix">
         <p>Welcome to the home page. This page will contain cards according to PDF design. Style, links, categories all tentative.</p>
         <p>Rough Mock up of cards below:</p>
-        
+        <Link to="/materialindex">New Index Page</Link>
         <Card
           title="Join The Fun" 
           subtitle="Membership and Communications"

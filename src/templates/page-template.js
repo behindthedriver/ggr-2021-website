@@ -3,7 +3,7 @@ import * as React from "react"
 import Bio from "../components/bio"
 import MaterialLayout from "../components/materiallayout"
 import RenderHelmet from "../components/helmet"
-import { Container } from "@material-ui/core"
+import { Card, CardContent, CardHeader, Container } from "@material-ui/core"
 
 import { graphql } from 'gatsby'
 
@@ -17,28 +17,23 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Container maxWidth="lg">
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+      <Container maxWidth="md">
+      <Card>
+        <CardHeader>
+        <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        <hr />
-        <footer>
-          <Bio />
-        </footer>
-      </article>
-      <nav className="blog-post-nav">
         
-      </nav>
+        </CardHeader>
+        <CardContent dangerouslySetInnerHTML={{ __html: post.html }}>
+        
+        </CardContent>
+      </Card>
+          
+        
+        
+          <Bio />
+        
+      
       </Container>
       
     </MaterialLayout>

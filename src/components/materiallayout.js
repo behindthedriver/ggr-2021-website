@@ -36,7 +36,7 @@ const useStyles = makeStyles( (theme) => (
       marginRight: theme.spacing(2),
     },
     appbar: {
-        backgroundColor: "#1e1e1e",
+        backgroundColor: "#e9e9e9",
       boxShadow: "0 0 0 0"
     },
     griditem: {
@@ -99,8 +99,11 @@ const MaterialLayout = ({ location, title, children }) => {
         </Toolbar>
         
       </AppBar>
+      <br />
       </header>
-      <main>{children}</main>
+      <main>
+      
+        {children}</main>
       <footer>
       <Container maxWidth="lg">
         <Grid container justify="center">
