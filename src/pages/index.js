@@ -24,7 +24,7 @@ const colorclubblau = "#0075e1"
 const colorgoldengate = "#ff4f00"
 const colorlightfont = "#F0F0F0"
 
-const cardwidth = 400
+const cardwidth = 500
 
 const useStyles = makeStyles(theme => ({
   media: {
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     height: "100px",
   },
   Container: {
-    maxWidth: "1400px",
+    maxWidth: "1100px",
     background: "transparent",
   },
 }))
@@ -183,7 +183,7 @@ const IndexPage = ({ data, location }) => {
                 imageAlt="Members Toasting at an event."
                 heading="Join the Fun"
                 subHeader="Membership and communications"
-             
+                dark="true"
               ></PcaCard>
             </Grid>
             <Grid item>
@@ -202,7 +202,7 @@ const IndexPage = ({ data, location }) => {
                 imageAlt="Cars waiting on autocross tarmac in double chevron."
                 heading="Autocrosss"
                 subHeader="Your cars and our cones"
-                
+                wide="true"
               >
                 <Link to="/autocross">About </Link>
                 / 
@@ -216,7 +216,7 @@ const IndexPage = ({ data, location }) => {
                 imageAlt="Race official standing in front of grid at race track."
                 heading="Track"
                 subHeader="Vroom. And then some."
-                
+                wide="true"
               ></PcaCard>
             </Grid>
             <Grid item>
@@ -226,7 +226,7 @@ const IndexPage = ({ data, location }) => {
                 imageAlt="Cars Driving through redwood forest."
                 heading="Social"
                 subHeader="It's not just the cars, it's the people!"
-                
+                dark="true"
               ></PcaCard>
             </Grid>
             <Grid item>
@@ -254,7 +254,7 @@ const IndexPage = ({ data, location }) => {
                 imageAlt="Cars Driving through redwood forest."
                 heading="Club Archives"
                 subHeader="Been there. Done that."
-                
+                dark="true"
               ></PcaCard>
             </Grid>
           </Grid>
