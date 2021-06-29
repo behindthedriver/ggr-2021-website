@@ -3,7 +3,7 @@ import * as React from "react"
 import Bio from "../components/bio"
 import MaterialLayout from "../components/materiallayout"
 import RenderHelmet from "../components/helmet"
-import { Card, CardContent, CardHeader, Container } from "@material-ui/core"
+import { Paper, Card, CardContent, CardHeader, Container } from "@material-ui/core"
 
 import { graphql } from 'gatsby'
 
@@ -18,21 +18,20 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <Container maxWidth="md">
-      <Card>
-        <CardHeader>
+      
+      <Paper>
+
+      
+        
         <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         
-        </CardHeader>
-        <CardContent dangerouslySetInnerHTML={{ __html: post.html }}>
         
-        </CardContent>
-      </Card>
-          
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         
         
           <Bio />
-        
+          </Paper>
       
       </Container>
       

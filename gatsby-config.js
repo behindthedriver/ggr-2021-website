@@ -12,6 +12,16 @@ module.exports = {
     },
   },
   plugins: [
+    'gatsby-plugin-top-layout',
+    {
+      resolve: 'gatsby-plugin-material-ui',
+      // If you want to use styled components you should change the injection order.
+      options: {
+         stylesProvider: {
+           injectFirst: true,
+         },
+      },
+    },
     //image plugin
     `gatsby-plugin-image`,
     //filesystem plugin
