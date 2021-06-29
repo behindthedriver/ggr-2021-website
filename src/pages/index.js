@@ -73,7 +73,12 @@ const IndexPage = ({ data, location }) => {
                 heading="Join the Fun"
                 subHeader="Membership and communications"
                 dark="true"
-              ></PcaCard>
+              >
+                <ButtonGroup>
+                  <Button href="/membership/join-ggr/">How to Join GGR</Button>
+                  <Button href="/membership/nugget/">Receive the Nugget</Button>
+                </ButtonGroup>
+              </PcaCard>
             </Grid>
             <Grid item>
               <PcaCard
