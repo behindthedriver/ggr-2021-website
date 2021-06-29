@@ -1,6 +1,5 @@
 import * as React from "react"
 
-import Bio from "../components/bio"
 import MaterialLayout from "../components/materiallayout"
 import RenderHelmet from "../components/helmet"
 import { Paper, Card, CardContent, CardHeader, Container } from "@material-ui/core"
@@ -29,8 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
         
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         
-        
-          <Bio />
+      
           </Paper>
       
       </Container>
